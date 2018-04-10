@@ -1,12 +1,12 @@
 pipeline {
   agent {
     docker {
-      image 'java:7u121-alpine'
+      image 'maven:alpine'
     }
     
   }
   stages {
-    stage('') {
+    stage('test') {
       steps {
         sh 'mvn -v'
       }
